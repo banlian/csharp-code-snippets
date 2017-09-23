@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{711F4F62-4A4B-4E3F-9B4C-2117ECBA0887}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BaseLibrary</RootNamespace>
+    <AssemblyName>BaseLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <AssemblyVersion>1.4.97.1111</AssemblyVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="INIFileParser, Version=2.3.0.0, Culture=neutral, PublicKeyToken=79af7b307b65cf3c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ini-parser.2.3.0\lib\net20\INIFileParser.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CsvValue\CsvAttribute.cs" />
+    <Compile Include="CsvValue\CsvControl.cs" />
+    <Compile Include="Extension\BinaryFileControl.cs" />
+    <Compile Include="Extension\DictonaryExtension.cs" />
+    <Compile Include="Extension\Extension.cs" />
+    <Compile Include="Extension\ForEachExtensions.cs" />
+    <Compile Include="Extension\StringBuilderExtension.cs" />
+    <Compile Include="Extension\StringExtension.cs" />
+    <Compile Include="Graphic\RectangleExtension.cs" />
+    <Compile Include="IniEdit\IniAttribute.cs" />
+    <Compile Include="IniEdit\IniEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IniEdit\IniEditControl.Designer.cs">
+      <DependentUpon>IniEditControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IniEdit\IniEditLoader.cs" />
+    <Compile Include="Interface\IConfig.cs" />
+    <Compile Include="Interface\IDataParser.cs" />
+    <Compile Include="Loading\LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading\LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Network\NetworkControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Network\NetworkControl.Designer.cs">
+      <DependentUpon>NetworkControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Network\NetworkManager.cs" />
+    <Compile Include="Network\WmiHelper.cs" />
+    <Compile Include="CsvValue\CsvValueObject.cs" />
+    <Compile Include="IniEdit\IniObject.cs" />
+    <Compile Include="Object\LogEventObject.cs" />
+    <Compile Include="Object\ProcessObject.cs" />
+    <Compile Include="Object\SingletonProgramObject.cs" />
+    <Compile Include="Object\TestResultObject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Object\SerialportObject.cs" />
+    <Compile Include="Statistics\StatisticsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Statistics\StatisticsUserControl.Designer.cs">
+      <DependentUpon>StatisticsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccess\UACAccess.cs" />
+    <Compile Include="Extension\BitConverterExtension.cs" />
+    <Compile Include="Extension\ArrayExtension.cs" />
+    <Compile Include="Extension\DateTimeStringExtension.cs" />
+    <Compile Include="Util\DictionarySerializer.cs" />
+    <Compile Include="Extension\DoubleArrayExtension.cs" />
+    <Compile Include="Util\Logger.cs" />
+    <Compile Include="Object\DataObject.cs" />
+    <Compile Include="Object\TcpClientObject.cs" />
+    <Compile Include="Util\ProcessControl.cs" />
+    <Compile Include="Util\ScreenShot.cs" />
+    <Compile Include="Extension\MacStringExtension.cs" />
+    <Compile Include="Version\VersionFile.cs" />
+    <Compile Include="Version\VersionQuery.cs" />
+    <Compile Include="View\IniUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\IniUserControl.Designer.cs">
+      <DependentUpon>IniUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LogUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\LogUserControl.Designer.cs">
+      <DependentUpon>LogUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MultiResultDetailUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\MultiResultDetailUserControl.Designer.cs">
+      <DependentUpon>MultiResultDetailUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\OperatorUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\OperatorUserControl.Designer.cs">
+      <DependentUpon>OperatorUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Point3dUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Point3dUserControl.Designer.cs">
+      <DependentUpon>Point3dUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ResultDetailUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ResultDetailUserControl.Designer.cs">
+      <DependentUpon>ResultDetailUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ResultStatusUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ResultStatusUserControl.Designer.cs">
+      <DependentUpon>ResultStatusUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ResultUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ResultUserControl.Designer.cs">
+      <DependentUpon>ResultUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserStartControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserStartControl.Designer.cs">
+      <DependentUpon>UserStartControl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="IniEdit\IniEditControl.resx">
+      <DependentUpon>IniEditControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loading\LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Network\NetworkControl.resx">
+      <DependentUpon>NetworkControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics\StatisticsUserControl.resx">
+      <DependentUpon>StatisticsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\IniUserControl.resx">
+      <DependentUpon>IniUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LogUserControl.resx">
+      <DependentUpon>LogUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MultiResultDetailUserControl.resx">
+      <DependentUpon>MultiResultDetailUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OperatorUserControl.resx">
+      <DependentUpon>OperatorUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Point3dUserControl.resx">
+      <DependentUpon>Point3dUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ResultDetailUserControl.resx">
+      <DependentUpon>ResultDetailUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ResultStatusUserControl.resx">
+      <DependentUpon>ResultStatusUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ResultUserControl.resx">
+      <DependentUpon>ResultUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserStartControl.resx">
+      <DependentUpon>UserStartControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Snippets\Singleton.snippet" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

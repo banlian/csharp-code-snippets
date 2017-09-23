@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>singleton</Title>
+            <Shortcut>singleton</Shortcut>
+            <Description>Generates a singleton class</Description>
+            <Author>ZZZ</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>ClassName</ID>
+                    <ToolTip>Replace with class name</ToolTip>
+                    <Default>MySingletonClass</Default>
+                </Literal>
+            </Declarations>
+
+            <Code Language="CSharp">
+                <![CDATA[
+                public class $ClassName$
+                {
+                    #region Singleton
+                    static readonly $ClassName$ ins = new $ClassName$();
+
+                    // Explicit static constructor to tell C# compiler
+                    // not to mark type as beforefieldinit
+                    static $ClassName$()
+                    {
+                    }
+
+                    private $ClassName$()
+                    {
+                    }
+
+                    public static $ClassName$ Only
+                    {
+                        get { return ins; }
+                    }
+                #endregion
+                }
+                ]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
